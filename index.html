@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="index.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    
+
     <title>pizzeria</title>
 </head>
 
@@ -95,69 +95,142 @@
 
 
         </div>
-        <div class="row">
-            <div class=" col-md-3 sizes var name" >
-                <select class="custom-select-lg mb-5 mt-3">
-                    <option selected>Choose your pizza</option>
-                    <option value="1">Small</option>
-                    <option value="2">Medium</option>
-                    <option value="3">Large</option>
-                </select>
-            </div>
-            <div class=" col-md-3 prices" id="sizes">
-                <select class="custom-select-lg mb-5 mt-3">
-                    <option selected>Choose the Amount</option>
-                    <option value="one">Small @ Ksh.500</option>
-                    <option value="two">Medium @ Ksh. 700</option>
-                    <option value="three">Large @ Ksh. 1000</option>
-                </select>
-            </div>
-            <div class="col-md-3 crust" id="crust">
-                <select class="  custom-select-lg mb-5 mt-3">
-                    <option selected>Choose your favoutite crust</option>
-                    <option value="first">Crispy @ Ksh 400</option>
-                    <option value="second">Stuffed @ Ksh. 500</option>
-                    <option value="third">Gluten @ Ksh. 100</option>
-                </select>
-            </div>
-            <div class="col-md-3 toppings" id="toppings">
-                <select class="  custom-select-lg mb-5 mt-3">
-                    <option selected>Choose your favoutite toppings</option>
-                    <option value="first">Sausage</option>
-                    <option value="second">Mushroom</option>
-                    <option value="third">Bacon</option>
-                </select>
+        <div class="order" id="make-order">
+                   <div class="row">
+                       <div class=" col-md-3 sizes var name">
+                           <select class="custom-select-lg mb-5 mt-3">
+                               <option selected>Choose your pizza</option>
+                               <option value="Magarita pizza">magarita pizza</option>
+                               <option value="Mushroom pizza">mushroom pizza</option>
+                               <option value="Seafood pizza">seafood pizza</option>
+                               <option value="Pepperoni pizza">pepperoni pizza</option>
+                               <option value="Meat pizza">Meat pizza</option>
+                               <option value="Chicken pizza">Chicken pizza</option>
+                               <option value="Buffalo pizza">Buffalo pizza</option>
+                           </select>
+                       </div>
+                       <div class=" col-md-3 prices size" id="size">
+                           <select class="custom-select-lg mb-5 mt-3">
+                               <option selected>Choose the Amount</option>
+                               <option value="Small">Small @ Ksh.500</option>
+                               <option value="Medium">Medium @ Ksh. 700</option>
+                               <option value="Large">Large @ Ksh. 1000</option>
+                           </select>
+                       </div>
+                       <div class="col-md-3 crust" id="crust">
+                           <select class="  custom-select-lg mb-5 mt-3">
+                               <option selected>Choose your favoutite crust</option>
+                               <option value="Crispy">Crispy @ Ksh 400</option>
+                               <option value="Stuffed">Stuffed @ Ksh. 500</option>
+                               <option value="Gluten">Gluten @ Ksh. 100</option>
+                           </select>
+                       </div>
+                       <div class="col-md-3">
+                           <label for="Toppings">Pick Toppings @KShs. 70</label><br>
+                           <div class="custom-control  custom-control-outline">
+                               <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage"
+                                   name="toppings">
+                               <label class="custom-control-label" for="Sausage">Sausage</label>
+                           </div>
+                           <div class="custom-control custom-checkbox custom-control-outline">
+                               <input type="checkbox" class="custom-control-input" id="Bacon" value="Bacon"
+                                   name="toppings">
+                               <label class="custom-control-label" for="Bacon">Bacon</label>
+                           </div>
+                           <div class="custom-control custom-checkbox custom-control-outline">
+                               <input type="checkbox" class="custom-control-input" id="Mushrooms" value="Mushrooms"
+                                   name="toppings">
+                               <label class="custom-control-label" for="Mushrooms">Mushrooms</label>
+                           </div><br>
+                       </div>
+                   </div>
+                   <div class="btn">
+                       <button type="submit" class="btn btn-success btn-lg proceed">Proceed</button>
+                   </div>
+                   <div id="your-orders">
+                       <table class="table pizzatable">
+                           <thead>
+                               <tr>
+                                   <th scope="col">Name</th>
+                                   <th scope="col">Size</th>
+                                   <th scope="col">Crust</th>
+                                   <th scope="col">Toppings</th>
+                                   <th scope="col">Total</th>
+                               </tr>
+                           </thead>
+                           <tbody id="ordersmade">
+                               <tr>
+                                   <td id="pizzaname"></td>
+                                   <td id="pizzasize"></td>
+                                   <td id="pizzacrust"></td>
+                                   <td id="pizzatopping"></td>
+                                   <td id="totals"></td>
+                               </tr>
 
+                           </tbody>
+                       </table>
+                       <p id="pizzatotal"></p>
+                       <p id="totalbill"></p>
+                       <p id="finallm"></p>
+                   </div>
+
+                   <div class="container-full">
+                       <div>
+                           <button class="addPizza">Add Pizza(s)</button><br>
+                       </div>
+                   </div><br>
+                   <div class="row">
+                       <div class="col">
+                           <button class="" id="checkout">Pick Up?</button>
+                       </div>
+                       <div class="col">
+                           <button class="deliver">Delivery?</button>
+                           <p id="addedprice">Delivery cost is KShs. 250</p>
+                       </div>
+                   </div>
+                   </div><br>
+                   <div class="container delivery">
+                       <form action="">
+                           <div class="form-group form">
+                               <input type="text" id="name" class="form-control mb-3" placeholder="Name" required>
+                               <input type="number" id="phone" class="form-control mb-3" placeholder="Phone Number"
+                                   required>
+                               <input type="text" id="email" class="form-control mb-3" placeholder="Email" required>
+                               <input type="text" id="location" class="form-control mb-3"
+                                   placeholder="Address for delivery" required>
+                               <button class="submit" id="final-order">Place Order</button>
+                           </div>
+                       </form>
+                   </div>
+        </div>
+
+    <div class="container-full text-center contact" id="contact">
+        <div class="contact-overlay">
+            <h2 class="text-center b-text">Contact Us</h2><br>
+            <div class="container">
+                <div class="col-md-12 input">
+                    <form id="form">
+                        <div class="row g-3">
+                            <div class="col">
+                                <input class="col-md-4 form-control name" type="text" id="name" placeholder="Name"
+                                    aria-label="name" value="" required>
+                            </div>
+                            <div class="col">
+                                <input class="col-md-4 form-control email" type="text" id="email" placeholder="Email"
+                                    aria-label="email" value="" required>
+                            </div>
+                        </div><br>
+
+                        <div class="mb-sm-1">
+                            <textarea class="form-control col-md-8 text" rows="6" name="message" id="message"
+                                placeholder="Comments"></textarea>
+                        </div>
+                        <button class="submit" id="okButton" type="submit">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="btn">
-            <button type="button" class="btn btn-success btn-lg">Order Now</button>
-        </div>
-        <table class="table pizzatable">
-            <thead>
-                <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Size</th>
-                    <th scope="col">Crust</th>
-                    <th scope="col">Toppings</th>
-                    <th scope="col">Total</th>
-                </tr>
-            </thead>
-            <tbody id="ordersmade">
-                <tr>
-                    <td id="pizzaname"></td>
-                    <td id="pizzasize"></td>
-                    <td id="pizzacrust"></td>
-                    <td id="pizzatoppings"></td>
-                    <td id="totals"></td>
-                </tr>
-                
-            </tbody>
-        </table>
-        <p id="pizzatotal"></p>
-        <p id="totalbill"></p>
-        <p id="fimallm"></p>
-        
+
     </div>
 
 
