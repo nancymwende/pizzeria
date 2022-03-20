@@ -28,3 +28,23 @@ ul li{
     cursor: pointer;
     font-size: 20px;
 }
+.part1{
+    position: absolute;
+    top: 27vh;
+    left: 10%;
+    width: 33%;
+}
+.part1 h1{
+    font-size: 80px;
+}
+.part1 p{
+    margin-top: 40px;
+    font-size: 18px;
+}
+.image{
+    float: right;
+    width: 30%;
+    height: 60px;
+    margin-right: 20%;
+    margin-top: 15%;
+}
