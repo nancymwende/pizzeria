@@ -3,28 +3,29 @@
 #### By **Nancy Mwende**
 
 ## ScreenShot
-<img src="images/Screenshot.png">
+<img src="assets/pizzeria.png">
 
 ## Description
-This is a portfolio containing the About section,Projects section,and Contact section.The project section contains the projects done while the Contact section c ontains the contact details.
+This is a Web Application that allows the user to to order the pizza of his/her choice and get it delivered at his/her desired location within a small given time.
 
 # Installation / Setup instruction
 
 <ul>
 <li>Open Terminal {Ctrl+Alt+T}</li>
-<li>git clone https://github.com/bkee9/my-portfolio</li>
-<li>cd myportfolio/ li>
+<li>git clone https://github.com/nancymwende/pizzeria</li>
+<li>cd pizzeria </li>
 <li>code . for VS code to run it</li>
 <li>Go live or start your server</li>
 </ul>
 
 ### Live Link
 
-<a>https://nancymwende.github.io/my-portfolio/</a>
+<a>nancymwende.github.io/pizzeria/</a>
 
 ## Known Bugs
 
-None that am aware of.
+None that am aware of.<br>
+in case of any please lemmy know.
 
 ## Technologies Used
 
@@ -33,18 +34,19 @@ None that am aware of.
 <li>HTML</li>
 <li>CSS</li>
 <li>BOOTSTRAP</li>
- <li></li>
+ <li>jQuery</li>
 </ul>
 
 ## BDD
-Scroll down to the form section;
+Scroll down to the pizza area
 
 <ul>
-<li>Enter your first name	e.g Nancy </li>
-<li>Enter your last  name e.g Mwende
-<li>Enter your Email Address e.g nancymwende860@gmail.com</li>
-<li>Enter your message</li>
-<li>Press Submit</li>
+<li>Enter your pizza type	e.g meat pizza </li>
+<li>Enter the amount you want e.g Ksh.700</li>
+<li>Enter the crust of your choice e.g cripsy </li>
+<li>Enter your toppings choice</li>
+<li>Press Proceed</li>
+<li> A summation regarding to what you have chose will pop up.
 </ul>
 
 ## Support and contact details
