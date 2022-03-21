@@ -25,15 +25,15 @@ $(document).ready(function(){
       price =0;
     break;
     case "large":
-       price = 1300;
+       price = 1000;
        console.log(price);
      break;
      case "medium":
-       price = 950;
+       price = 700;
        console.log("The price is "+price);
      break;
      case "small":
-       price = 700;
+       price = 500;
        console.log(price);
      default:
        console.log("undefined"); 
@@ -43,13 +43,13 @@ $(document).ready(function(){
         crust_price = 0;
       break;
       case "Crispy":
-        crust_price = 250;
+        crust_price = 400;
       break;
       case "Stuffed":
-        crust_price = 200;
+        crust_price = 500;
       break;
       case "Gluten-free":
-        crust_price = 230;
+        crust_price = 100;
       break;
       default:
         console.log("undefined"); 
